@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+    <h3 class="text-center mb-4">Iniciar Sesión</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="tucorreo@ejemplo.com"
+        />
+        <ul class="text-danger small mt-1" *ngIf="loginForm.get('email')?.touched">
+          <li *ngFor="let error of getErrorMessages('email')">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="••••••"
+        />
+        <ul class="text-danger small mt-1" *ngIf="loginForm.get('password')?.touched">
+          <li *ngFor="let error of getErrorMessages('password')">{{ error }}</li>
+        </ul>
+      </div>
+
+      <div class="d-grid">
+        <button class="btn btn-primary" type="submit">Entrar</button>
+      </div>
+    </form>
+  </div>
+</div>
