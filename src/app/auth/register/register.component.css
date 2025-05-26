@@ -1,4 +1,17 @@
+.register-wrapper {
+  background: linear-gradient(135deg, #d0e6fa, #fce8f6);
+}
+
+.register-form {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 input:focus {
-  box-shadow: none;
-  border-color: #28a745;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
 }
