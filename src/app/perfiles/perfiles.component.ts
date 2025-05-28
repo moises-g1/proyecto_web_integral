@@ -8,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './perfiles.component.css'
 })
 export class PerfilesComponent {
+   usuario = {
+    nombre: 'Luis Ángel Matadamas',
+    email: 'luis@example.com',
+    rol: 'Administrador',
+    foto: 'https://via.placeholder.com/120'
+  };
 
 }
